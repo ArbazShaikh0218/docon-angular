@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: #000;
+}
+
+.form-label {
+  color: rgb(59, 59, 59);
+}
+
+.login-btn {
+  width: 100%;
+  // background-color:rgb(36,92,172);
+  // color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-label-size{
+  font-size: 0.83rem !important;
+}
+
+.form-input-height{
+  height: 2.1rem !important;
+}
+
+.form-valid-text{
+    margin-top:-2rem !important;
+    margin-bottom: 1.5rem !important;
+}

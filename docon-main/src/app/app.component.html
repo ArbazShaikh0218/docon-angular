@@ -1,0 +1,27 @@
+
+<!-- <router-outlet></router-outlet> -->
+<div ngClass="body">
+    <div class="container-fluid header">
+      <div class="row ">
+        <div class="col-lg-1">
+          <a class="hamburger" (click)="drawer.toggle()"><mat-icon>menu</mat-icon></a>
+        </div>
+        <div class="col-lg-11">
+          <app-header ngClass="position"></app-header>
+        </div>
+      </div>
+    </div>
+  
+  
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <app-sidenav></app-sidenav>
+      </mat-drawer>
+  
+      <mat-drawer-content class="margin">
+        <router-outlet ngClass="overflow"></router-outlet>
+      </mat-drawer-content>
+  
+    </mat-drawer-container>
+  
+  </div>

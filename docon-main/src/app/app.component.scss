@@ -1,0 +1,63 @@
+
+
+  // .body {
+  //   width: 100%;
+  //   height: 100%;
+  //   overflow: hidden;
+  //   color: #ffffff;
+  // }
+  
+  .example-container {
+    width: 100%;
+    height: 100%;
+    // background-color: 	rgb(231, 236, 242);
+    background-color: white;
+    // z-index: -1;
+  }
+  
+  .example-sidenav {
+    padding: 3.5rem;
+    background-color: rgb(35, 26, 41);
+    color: rgb(176, 168, 204);
+  }
+  
+  .position {
+    position: sticky;
+    display: flexbox;
+    // box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  }
+  
+  .hamburger {
+    color: rgb(35, 26, 41);
+    margin-top: 1.5rem;
+    margin-left: 0.3rem;
+    display: inline-block;
+  }
+  
+  .header {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 4.5rem;
+    position: sticky;
+   border-bottom:0.01rem solid rgb(231, 231, 231);
+
+    }
+  
+  .margin {
+    padding: 2rem;
+  }
+  
+  .icons-sidenav {
+    height: 100%;
+    width: 3.7rem;
+    background-color: rgb(35, 26, 41);
+    color: rgb(176, 168, 204);
+  }
+  
+  .overflow {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+

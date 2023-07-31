@@ -1,0 +1,96 @@
+<div class=" log-in mb-6">
+  <div class="bg-image-box">
+  
+         <div class="container box-width">  
+           <div class="row">   
+
+        <div class=" text col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <img [src]="logo" class="logo">
+          <p class="text-value"> Schedule your appointment with expert doctors </p>
+        </div>
+       
+          <div class="myform col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <form class="form-size" [formGroup]="logInForm" (ngSubmit)="onFormSubmit(logInForm)" >
+
+              <!-- Email input -->
+              <div class="form-outline">
+                <label class="form-label text-label-size" for="emailId">Email</label>
+
+                <input type="email" id="emailId" class="form-control form-input-height" name="emailId" emailId="emailId"
+                  formControlName="emailId" />
+              </div>
+              <div *ngIf="emailId.invalid && (emailId.dirty || emailId.touched)">
+                <div class="text-danger text-label-size" *ngIf="emailId.errors?.['required']">
+                  Email is required.
+                </div>
+                <div class="text-danger text-label-size" *ngIf="emailId.errors?.['email']">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <!-- <div class="text-danger text-label-size" *ngIf="emailId.invalid && emailId.dirty">
+                <span *ngIf="emailId.errors!['required']">Email is required</span>
+                 </div> -->
+
+              <!-- Password input -->
+              <div class="form-outline mt-4">
+                <label class="form-label text-label-size" for="passcode">Password</label>
+
+                <input type="password" id="passcode" class="form-control form-input-height" name="passcode" passcode="passcode"
+                  formControlName="passcode" />
+              </div>
+              <div class="text-danger text-label-size" *ngIf="passcode.invalid && (passcode.dirty || passcode.touched)">
+                <div *ngIf="passcode.errors?.['required']">
+                  Password is required.
+                </div>
+                <div class="text-danger text-label-size" *ngIf="passcode.errors?.['minlength']">
+                  Password must be at least 8 characters long.
+                </div>
+                <div class="text-danger text-label-size" *ngIf="passcode.errors?.['pattern']">
+                  Password must contain at least one lowercase<br>letter, one uppercase letter, one digit, and one<br>special character.
+                </div>
+              </div>
+              <!-- <div class="text-danger text-label-size" *ngIf="passcode.invalid && passcode.dirty">
+                <span *ngIf="passcode.errors!['required']">Password is required</span>
+                 </div> -->
+
+              <!-- 2 column grid layout for inline styling -->
+              <div class="row mt-4">
+                <div class="col d-flex justify-content-center">
+                  <!-- Checkbox -->
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+
+                    <label class="form-check-label text-dark text-label-size" for="form2Example31">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col justify-content-center">
+                  <!-- Simple link -->
+                  <a class="text-dark text-label-size">Forgot password?</a>
+                </div>
+              </div>
+
+              <!-- Submit button -->
+              <div class="col-12" >
+                <button type="submit" [disabled]="!logInForm.valid" class="btn btn-primary form-input-height text-label-size login-btn btn-block mt-4">
+                  Log in
+                </button>
+              </div>
+
+              <!-- Register buttons -->
+              <div class="text-center mt-4">
+                <p class="text-dark text-label-size">Not a member? <a [routerLink]="['/registers']">Register</a></p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+
+  
+
+    <img [src]="img" alt="vector image" class="image">
+  </div>
+</div>
